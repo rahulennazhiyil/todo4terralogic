@@ -8,36 +8,36 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ReativeFormsComponent implements OnInit {
 
-  sampleLoginForm: FormGroup;
+  // sampleLoginForm: FormGroup;
 
-  constructor() {
-    this.sampleLoginForm = new FormGroup({
-      username: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      email: new FormControl('', [Validators.required,Validators.email,]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6)])
-    });
-  }
+  // constructor() {
+  //   this.sampleLoginForm = new FormGroup({
+  //     username: new FormControl('', [Validators.required, Validators.minLength(3)]),
+  //     email: new FormControl('', [Validators.required,Validators.email,]),
+  //     password: new FormControl('', [Validators.required, Validators.minLength(6)])
+  //   });
+  // }
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    if (this.sampleLoginForm.valid) {
-      console.log('Form Submitted!', this.sampleLoginForm.value);
-    }
-  }
+  // onSubmit() {
+  //   if (this.sampleLoginForm.valid) {
+  //     console.log('Form Submitted!', this.sampleLoginForm.value);
+  //   }
+  // }
 
-  submitForm(){
-    if (this.sampleLoginForm.valid) {
-      alert('Form Submited Successfully');
-      this.clear();
-    }else{
-      alert('Please Input All Fields')
-    }
-  }
+  // submitForm(){
+  //   if (this.sampleLoginForm.valid) {
+  //     alert('Form Submited Successfully');
+  //     this.clear();
+  //   }else{
+  //     alert('Please Input All Fields')
+  //   }
+  // }
 
-  clear(){
-    this.sampleLoginForm.reset();
-  }
+  // clear(){
+  //   this.sampleLoginForm.reset();
+  // }
 
 }

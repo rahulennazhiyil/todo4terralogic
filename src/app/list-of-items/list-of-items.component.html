@@ -1,0 +1,8 @@
+<div style="display: flex; flex-direction: column;">
+  <h2 *ngIf="todos.length > 0">Todo List</h2>
+  <div *ngFor="let todo of todos; let i = index">
+    <app-items-list [todo]="todo" [index]="i" (completedChange)="markAsCompleted(i)" (editClick)="editTodo(i)"
+      (deleteClick)="deleteTodo(i)">
+    </app-items-list>
+  </div>
+</div>

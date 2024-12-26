@@ -1,0 +1,6 @@
+<div style="display: flex;gap: 10px;justify-content: start; padding: 5px 0;">
+  <input type="checkbox" [(ngModel)]="todo.completed" (change)="onCompletedChange()" />
+  <span [ngClass]="todo.completed? 'completed' :''">{{ todo.title }} <span *ngIf="todo.description">, {{ todo.description }}</span></span>
+  <button (click)="onEditClick()">Edit</button>
+  <button (click)="onDeleteClick()">Delete</button>
+</div>
